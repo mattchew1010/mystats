@@ -12,6 +12,8 @@ export default function Home() {
          width="500"
          height="600"
          />
+
+         <p>Nick kinda cute</p>
       </>
    )
 }
