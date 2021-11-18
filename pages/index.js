@@ -2,7 +2,7 @@ import Image from 'next/image'
 import nick from '../public/home/nick.jpg'
 
 
-export default function() {
+export default function Home() {
    return (
       <>
          <title>Home</title>
