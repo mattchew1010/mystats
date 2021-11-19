@@ -1,8 +1,6 @@
 
-
-
-export default function Login() {
+export default function Home() {
    return (
-      <title>Login</title>
+         <title>Login</title>
    )
 }
