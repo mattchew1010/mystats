@@ -6,13 +6,13 @@ export default function Home() {
       <>
          <title>Home</title>
          <Image 
-         src='/Home/nick.jpg'
+         src='/Home/cert.jpg'
          alt="Picture of a cute mf"
          width="500"
          height="600"
          />
 
-         <p>Nick kinda cute</p>
+         <p>#1 best guy</p>
       </>
    )
 }
