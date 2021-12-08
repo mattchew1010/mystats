@@ -3,13 +3,13 @@ import Head from 'next/head';
 export default function Metatags({
   title = 'mattchew1010.com',
   description = "mattchew1010's site",
-  image = 'https://fireship.io/courses/react-next-firebase/img/featured.png',
+  image = '/icons/google.png',
 }) {
   return (
     <Head>
       <title>{title}</title>
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@fireship_dev" />
+      <meta name="twitter:site" content="@mattchew1010" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
