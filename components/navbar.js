@@ -1,24 +1,9 @@
 import Link from 'next/link';
-import { UserContext } from '../../lib/UserContext';
+import { UserContext } from '../lib/UserContext';
+import {useContext } from 'react';
+import { auth } from '../lib/firebase';
 
-function login() {
-  return (
-        <li>
-          <Link href="/login">
-            <button className="btn-blue">Log in</button>
-          </Link>
-        </li>
-  )
-}
-function logout() {
-  return (
-    <li>
-      <Link href="/logout">
-        <button onClick={() => auth.signOut()}>Sign Out</button>;
-      </Link>
-    </li>
-)
-}
+
 export default function Navbar() {
   const { user, username } = useContext(UserContext);
    return (
@@ -29,8 +14,26 @@ export default function Navbar() {
              <button className="btn-logo">SITE_NAME</button>
            </Link>
          </li>
-           {user ? <logout/> : <login/>}
+           {user ? <Logout/> : <Login/>}
        </ul>
      </nav>
    )
+}
+
+
+function Login() {
+  return (
+        <li>
+          <Link href="/login">
+            <button className="btn-blue">Log in</button>
+          </Link>
+        </li>
+  )
+}
+function Logout() {
+  return (
+    <li>
+        <button onClick={() => auth.signOut()}>Sign Out</button>;
+    </li>
+)
 }
