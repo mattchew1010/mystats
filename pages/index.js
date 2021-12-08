@@ -1,4 +1,5 @@
 import Navbar from '../components/navbar'
+import Image from 'next/image'
 
 
 export default function Login() {
@@ -6,8 +7,6 @@ export default function Login() {
       <>
          <Navbar/>
          <title>Home</title>
-<<<<<<< HEAD
-=======
          <Image 
          src='/Home/cert.png'
          alt="Picture of a cute mf"
@@ -16,7 +15,6 @@ export default function Login() {
          />
 
          <p>#1 best guy</p>
->>>>>>> 59995d8430b3f753510bfa799ba672b7903c3e37
       </>
    )
 }
