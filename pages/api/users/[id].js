@@ -1,9 +1,7 @@
-import { useRouter } from 'next/router'
 import {firebase} from '../../../lib/firebase'
 
 export default function user(req,res) {
-    const router = useRouter();
-    const {id} = router.query
+    const id = req.query.id
 
     const collection = firestore.collection('usernames');
     const result = usersRef.where('uid', '==', id).limit(1);
