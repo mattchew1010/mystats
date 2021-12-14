@@ -14,6 +14,11 @@ export default function Navbar() {
              <button className="btn-logo">SITE_NAME</button>
            </Link>
          </li>
+         <li>
+           <Link href="/dashboard">
+             <button className="btn-logo">Dashboard</button>
+           </Link>
+         </li>
            {user ? <Logout/> : <Login/>}
        </ul>
      </nav>
