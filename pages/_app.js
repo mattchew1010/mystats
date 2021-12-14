@@ -1,5 +1,5 @@
 import '@styles/globals.css'
-import { UserContext } from '@lib/UserContext';
+import { UserContext } from '@lib/userContext';
 import { useUserData } from '@lib/hooks';
 
 function MyApp({ Component, pageProps }) {

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { UserContext } from '@lib/UserContext';
+import { UserContext } from '@lib/userContext';
 import {useContext } from 'react';
 import { auth } from '@lib/firebase';
 
