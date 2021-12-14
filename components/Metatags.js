@@ -7,6 +7,7 @@ export default function Metatags({
 }) {
   return (
     <Head>
+
       <title>{title}</title>
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@mattchew1010" />
@@ -17,7 +18,9 @@ export default function Metatags({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta charset="utf-8" />
+      <meta charSet="utf-8"/>
+      <meta name="description" content={description} />
+      
     </Head>
   );
 }
