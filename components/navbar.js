@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { UserContext } from '../lib/UserContext';
+import { UserContext } from '@lib/UserContext';
 import {useContext } from 'react';
-import { auth } from '../lib/firebase';
+import { auth } from '@lib/firebase';
 
 
 export default function Navbar() {
