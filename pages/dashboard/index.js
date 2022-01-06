@@ -5,7 +5,7 @@ import Metatags from '@components/metatags'
 export default function Dashboard() {
    return (
       <>
-         <Metatags title= {"Dashboard  | " }/>
+         <Metatags title= {"Dashboard  | "}/>
          <Navbar/>
       </>
    )
