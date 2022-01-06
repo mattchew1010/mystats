@@ -1,4 +1,4 @@
-import Navbar from '@components/navbar'
+import Navbar from 'components/navbar'
 import Metatags from '@components/metatags'
 import {UserContext} from '@lib/UserContext'
 import {useContext} from 'react';
