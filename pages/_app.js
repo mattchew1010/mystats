@@ -1,15 +1,13 @@
 import '@styles/globals.css'
-import { UserContext } from '@lib/UserContext';
-import { useUserData } from '@lib/hooks';
+import { SessionProvider } from "next-auth/react"
 
-function MyApp({ Component, pageProps }) {
-  const userData = useUserData();
-
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}) {
   return (
-  <UserContext.Provider value={userData}>
-    <Component {...pageProps} />
-  </UserContext.Provider> 
+    <SessionProvider session={session}>
+      <Component {...pageProps} />
+    </SessionProvider>
   )
 }
-
-export default MyApp

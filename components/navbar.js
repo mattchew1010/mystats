@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import { UserContext } from '@lib/UserContext';
-import {useContext } from 'react';
-import { auth } from '@lib/firebase';
+import { useSession, signIn, signOut } from "next-auth/react"
 
 
 export default function Navbar() {
-  const { user, username } = useContext(UserContext);
-   return (
+  const { data: session } = useSession()
+
+  return (
      <nav className="navbar">
        <ul>
          <li>
@@ -19,7 +18,7 @@ export default function Navbar() {
              <button className="btn-logo">Dashboard</button>
            </Link>
          </li>
-           {user ? <Logout/> : <Login/>}
+           {session ? <Logout/> : <Login/>}
        </ul>
      </nav>
    )
@@ -38,7 +37,7 @@ function Login() {
 function Logout() {
   return (
     <li>
-        <button onClick={() => auth.signOut()}>Sign Out</button>;
+        <button onClick={() => signOut()}/>;
     </li>
 )
 }
