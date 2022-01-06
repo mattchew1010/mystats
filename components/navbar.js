@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { UserContext } from '../lib/UserContext';
+import { UserContext } from '@lib/UserContext';
 import {useContext } from 'react';
-import { auth } from '../lib/firebase';
+import { auth } from '@lib/firebase';
 
 
 export default function Navbar() {
@@ -12,6 +12,11 @@ export default function Navbar() {
          <li>
            <Link href="/">
              <button className="btn-logo">SITE_NAME</button>
+           </Link>
+         </li>
+         <li>
+           <Link href="/dashboard">
+             <button className="btn-logo">Dashboard</button>
            </Link>
          </li>
            {user ? <Logout/> : <Login/>}

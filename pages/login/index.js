@@ -1,13 +1,17 @@
-import { auth, firestore, googleAuthProvider } from '../../lib/firebase';
-import { UserContext } from '../../lib/UserContext';
-import Metatags from '../../components/Metatags';
+import { auth, firestore, googleAuthProvider } from '@lib/firebase';
+import { UserContext } from '@lib/UserContext';
+import Metatags from '@components/metatags';
 
-import { useEffect, useState, useCallback, useContext } from 'react';
+import {useEffect, useState, useCallback, useContext } from 'react';
+import { useRouter } from 'next/router'
+
 import debounce from 'lodash.debounce';
 
 export default function Enter(props) {
   const { user, username } = useContext(UserContext);
-  console.log(user)
+  if (user && username) {
+    useRouter().push('/dashboard')
+  }
   // 1. user signed out <SignInButton />
   // 2. user signed in, but missing username <UsernameForm />
   // 3. user signed in, has username <SignOutButton />
