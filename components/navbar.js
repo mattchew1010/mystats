@@ -10,7 +10,7 @@ export default function Navbar() {
        <ul>
          <li>
            <Link href="/">
-             <button className="btn-logo">[BRAND]</button>
+             <button className="btn-logo">mattchew1010</button>
            </Link>
          </li>
          <li>
