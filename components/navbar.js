@@ -37,7 +37,8 @@ function Login() {
 function Logout() {
   return (
     <li>
-        <button onClick={() => signOut()}/>;
+      <button className="btn-red" onClick={() => signOut()}>Sign Out</button>
+        <button />;
     </li>
 )
 }
