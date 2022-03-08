@@ -12,6 +12,8 @@ export default function Dashboard() {
       <>
          <Metatags title= {"Dashboard  | " + session.user.name}/>
          <Navbar/>
+
+         <h1>Welcome, {session.user.name}</h1>
       </>
    )
 }
