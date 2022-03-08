@@ -5,9 +5,8 @@ import { GoogleLoginButton } from "react-social-login-buttons";
 
 export default function Enter() {
   const { data: session } = useSession()
-  if (session) {
-    useRouter().push('/dashboard')
-  }
+  const router = useRouter()
+  if (session) router.push('/dashboard')
   return (
     <main>
       <Metatags title="Login" description="Login and sign up page" />
