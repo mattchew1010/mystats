@@ -1,15 +1,12 @@
 import { useRouter } from 'next/router'
-import db from '@lib/db'
+import {userById} from '@lib/db'
 
-function Users() {
-    const router = useRouter()
-    const {id} = router.query
-    if (id.match() != id) return (<p>Not Valid UUID</p>)
+export default function Users(req, res) {
+    console.log(req.query)
+    const id = req.query.id
 
-    let data = {}
-    db.userById(id).then((user) => {
-        data = user
-        console.log(typeof(data))
-    }).catch(console.log)
-    return data
+    userById(id).then((user) => {
+        console.log(user)
+        res.status(200).json(user)
+    }).catch()
 }
