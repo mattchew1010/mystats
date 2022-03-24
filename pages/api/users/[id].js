@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import {userById} from '@lib/db'
 
 export default function Users(req, res) {
