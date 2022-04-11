@@ -1,5 +1,4 @@
 import Navbar from '@components/navbar'
-import Image from 'next/image'
 import Metatags from '@components/metatags'
 
 export default function Login() {
