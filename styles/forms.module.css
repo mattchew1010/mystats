@@ -1,0 +1,41 @@
+.container {
+    font-size: 1.5rem;
+    border-radius: 6px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-top: -12.5%;
+    margin-left: -12.5%;
+    width: 25%;
+    height: 40%;
+    background-color: rgb(49, 49, 49);
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.submit{
+    
+    margin-top: 40%;
+    margin-left: 25%;
+    width: 50%;
+    height: 10%;
+    border-radius: 6px;
+}
+
+.textinput {
+    color: white;
+    margin-top: 5%;
+    background-color: rgb(97, 96, 96);
+    width: 95%;
+    margin-left: 2.5%;
+    border-radius: 5px;
+}
+
+.errorMessage {
+    color: #cc0033;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 15px;
+    margin: 5px 0 0;
+  }
