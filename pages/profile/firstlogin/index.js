@@ -1,4 +1,4 @@
-import { useSession} from "next-auth/react"
+import { useSession, getSession} from "next-auth/react"
 import Metatags from '@components/metatags'
 import React from "react"
 import style from '@styles/forms.module.css'
@@ -19,11 +19,12 @@ class UsernameForm extends React.Component {
     
       handleSubmit(event) {
         event.preventDefault()
-        const {data} = useSession()
-        const result = fetch('/api/users/' + data.userId + '?setUsername=' + this.state.value)
-        if (result.ok) {
-            useRouter.push('/dashboard')
-        }
+        getSession().then(data => {
+            const result = fetch('/api/users/' + data.userId + '?setUsername=' + this.state.value)
+            if (result.ok) {
+                useRouter.push('/dashboard')
+            }
+        })
       }
 
     render() {
